@@ -4,16 +4,16 @@
 
 ARG BASE_IMAGE
 
-FROM ${BASE_IMAGE}
+FROM docker.io/xyksolutions1/container-nginx-php-fpm:latest
 
 LABEL \
         org.opencontainers.image.title="Laravel" \
         org.opencontainers.image.description="Containerized base image with Nginx, PHP-FPM to run Laravel applications" \
-        org.opencontainers.image.url="https://hub.docker.com/r/nfrastack/laravel" \
-        org.opencontainers.image.documentation="https://github.com/nfrastack/container-laravel/blob/main/README.md" \
-        org.opencontainers.image.source="https://github.com/nfrastack/container-laravel.git" \
-        org.opencontainers.image.authors="Nfrastack <code@nfrastack.com>" \
-        org.opencontainers.image.vendor="Nfrastack <https://www.nfrastack.com>" \
+        org.opencontainers.image.url="https://hub.docker.com/r/xyksolutions1/laravel" \
+        org.opencontainers.image.documentation="https://github.com/xyksolutions1/container-laravel/blob/main/README.md" \
+        org.opencontainers.image.source="https://github.com/xyksolutions1/container-laravel.git" \
+        org.opencontainers.image.authors="xyksolutions1" \
+        org.opencontainers.image.vendor="xyksolutions1" \
         org.opencontainers.image.licenses="MIT"
 
 COPY CHANGELOG.md /usr/src/container/CHANGELOG.md
@@ -26,7 +26,7 @@ ARG \
 ENV \
     NGINX_SITE_ENABLED=laravel \
     IMAGE_NAME=nfrastack/laravel \
-    IMAGE_REPO_URL=https://github.com/nfrastack/container-laravel
+    IMAGE_REPO_URL=https://github.com/xyksolutions1/container-laravel
 
 RUN echo "" && \
     BUILD_ENV=" \
